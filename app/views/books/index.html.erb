@@ -1,33 +1,39 @@
-<h1>Books</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Author</th>
-      <th>Desc</th>
-      <th>Isbn</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= book.name %></td>
-        <td><%= book.author %></td>
-        <td><%= book.desc %></td>
-        <td><%= book.isbn %></td>
-        <td><%= book.date %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Book', new_book_path %>
+<body>
+  <header class="menu">
+    <p class="brand">Pergaminho<i class="fa-solid fa-book"></i></p>
+    <div class="nav">
+      <%= link_to "Início", root_path, class: 'inicio'%>
+      <a class="perfil" href="#">Perfil</a>
+      <%= link_to "Sair", destroy_user_session_path, method: :delete, class:'sair'%>
+    </div>
+  </header>
+  <main>
+    <h1>Pergaminho<i class="fa-solid fa-book"></i></h1>
+    <div class="pesquisa">
+      <input
+        class="barra-de-pesquisa"
+        type="search"
+        placeholder="Buscar por título, autor, obra..."
+      />
+      <button class="pesquisa-btn" type="button">
+        Pesquisar
+      </button>
+    </div>
+    <%= pluralize(@books.size, "Livro", "Livros")%>
+    <div>
+    <ul>
+          <% @books.each do |book| %>
+            <div class="quack">
+              <li> <h3>Nome:  </h3><%= link_to book.name, book%> </li>
+              <li> Autor: <%= book.author %> </li>
+              <li> Descrição: <%= book.desc %> </li>
+              <li> <%= book.isbn %> </li>
+            </div>
+          <% end %>
+    </ul>
+    </div>
+    <%= link_to "New Book", new_book_path%>
+  </main>
+  <%= render 'layouts/pagination'%>
+  <footer>© 2022. Pergamum. Todos os direitos reservados.</footer>
+</body> 
