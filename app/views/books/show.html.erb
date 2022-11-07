@@ -24,4 +24,5 @@
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back', books_path %> |
+<%= link_to "Destroy this book", @book, method: :delete, data:{confirm: "Do you want to delete?"} %>
