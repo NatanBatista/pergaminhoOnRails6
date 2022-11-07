@@ -4,7 +4,8 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
-    @books = Book.all
+    current_page = (params[:page] || 1).to_i
+    @books = Book.page(current_page).per(4)
   end
 
   # GET /books/1 or /books/1.json
