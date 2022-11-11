@@ -3,7 +3,8 @@
     <p class="brand">Pergaminho<i class="fa-solid fa-book"></i></p>
     <div class="nav">
       <%= link_to "Início", root_path, class: 'inicio'%>
-      <a class="perfil" href="#">Perfil</a>
+      <%= link_to "Categorias", categories_path, class: 'categorias' %>
+      <%= link_to "Editar Perfil", edit_user_registration_path, class: 'perfil' %>
       <%= link_to "Sair", destroy_user_session_path, method: :delete, class:'sair'%>
     </div>
   </header>
@@ -21,19 +22,19 @@
     </div>
     <%= pluralize(@books.size, "Livro", "Livros")%>
     <div>
-    <ul>
+    <div class="livros">
           <% @books.each do |book| %>
-            <div class="quack">
-              <li> <h3>Nome:  </h3><%= link_to book.name, book%> </li>
-              <li> Autor: <%= book.author %> </li>
-              <li> Descrição: <%= book.desc %> </li>
-              <li> <%= book.isbn %> </li>
-            </div>
+            <ul class="card-livro">
+                <li>
+                  <%= link_to book.name, book, class: 'titulo' %> 
+                  <%= book.author %> 
+                </li>
+                <li class="descricao_livro"><%= book.desc %></li>
+            </ul>
           <% end %>
-    </ul>
     </div>
-    <%= link_to "New Book", new_book_path%>
+    </div>
+    <%= link_to "Novo livro", new_book_path%>
   </main>
-  <%= render 'layouts/pagination'%>
-  <footer>© 2022. Pergamum. Todos os direitos reservados.</footer>
+  <%= render 'pagination'%>
 </body> 
