@@ -1,20 +1,38 @@
-<h2>Log in</h2>
+    <body>
+    <div class="main">
+      <div class="header">
+        <div class="titulo">
+          <h1>Pergaminho<i class="fa-solid fa-book"></i></h1>
+        </div>
+        <div class="subtitulo">
+          <h2>
+            Sistema online da Biblioteca Central da Universidade Federal de
+            Alpiste
+          </h2>
+        </div>
+      </div>
+      <div class="barra-login">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+        <h2>Entrar no sistema</h2>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="login">
+          <%= f.input :email,
+              required: false,
+              autofocus: true,
+              input_html: { autocomplete: "email" },
+              placeholder: 'Email', class: "matricula"%>
+          <%= f.input :password,
+                      required: false,
+                      input_html: { autocomplete: "current-password" },
+                      placeholder: 'Senha', class: "senha" %>
+          <%= f.button :submit, "Entrar", class: "entrar"%>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+        <% end %>
+        <p class="cadastro-txt">
+          Não possui uma conta?
+          <%= render "devise/shared/links" %>
+        </p>
+      </div>
+    </div>
+    <footer>© 2022. Pergamum. Todos os direitos reservados.</footer>
