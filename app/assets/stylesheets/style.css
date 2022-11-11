@@ -20,6 +20,24 @@ h2 {
   color: rgb(107, 127, 146);
 }
 
+a {
+  color: #12537e;
+}
+
+.notices {
+  color: green;
+  text-align: center;
+  display: block;
+  background: #fff;
+  position: absolute;
+  left: 40%;
+  top: 10px;
+}
+
+.notices.red {
+  color: red;
+}
+
 .fa-book {
   font-size: 40px;
   margin-left: 10px;
@@ -65,8 +83,16 @@ h2 {
   text-align: justify;
 }
 
-label {
+label.email, label.password {
  display: none;
+}
+
+.user_remember_me {
+  text-align: center;
+}
+
+label.checkbox {
+  color: #12537e;
 }
 
 input.matricula,

@@ -1,0 +1,66 @@
+.form_livro {
+  width: 350px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 2px 5px -1px rgba(92, 96, 105, 0.56);
+  padding: 1rem;
+}
+
+.form_livro .input {
+  width: 100%;
+}
+
+.form_livro label {
+  display: none;
+}
+label.date {
+  display: block;
+}
+
+.form_livro input,
+.form_livro textarea,
+.input.date,
+.input.select {
+  min-height: 35px;
+  width: 100%;
+  padding: 5px;
+  border: #2c3e66 2px solid;
+  border-radius: 8px;
+}
+
+.form_livro textarea {
+  height: 80px;
+  resize: none;
+}
+
+.livros {
+  padding: 1rem 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.card-livro {
+  display: flex;
+  flex-flow: column;
+  gap: .5rem;
+  width: 250px;
+  height: 180px;
+  padding: .5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #2c3e66;
+}
+
+.descricao_livro {
+  overflow: hidden;
+}
+
+.titulo {
+  font-size: 1.3rem;
+  display: block;
+}
