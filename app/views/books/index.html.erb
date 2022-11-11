@@ -1,13 +1,4 @@
 <body>
-  <header class="menu">
-    <p class="brand">Pergaminho<i class="fa-solid fa-book"></i></p>
-    <div class="nav">
-      <%= link_to "Início", root_path, class: 'inicio'%>
-      <%= link_to "Categorias", categories_path, class: 'categorias' %>
-      <%= link_to "Editar Perfil", edit_user_registration_path, class: 'perfil' %>
-      <%= link_to "Sair", destroy_user_session_path, method: :delete, class:'sair'%>
-    </div>
-  </header>
   <main>
     <h1>Pergaminho<i class="fa-solid fa-book"></i></h1>
     <div class="pesquisa">
@@ -36,5 +27,5 @@
     </div>
     <%= link_to "Novo livro", new_book_path%>
   </main>
-  <%= render 'pagination'%>
+  <%= render 'layouts/pagination'%>
 </body> 
