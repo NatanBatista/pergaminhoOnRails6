@@ -1,25 +1,27 @@
-<h1>Categories</h1>
+<header class="menu">
+    <p class="brand">Pergaminho<i class="fa-solid fa-book"></i></p>
+    <div class="nav">
+      <%= link_to "Início", root_path, class: 'inicio'%>
+      <%= link_to "Categorias", categories_path, class: 'categorias' %>
+      <a class="perfil" href="#">Perfil</a>
+      <%= link_to "Sair", destroy_user_session_path, method: :delete, class:'sair'%>
+    </div>
+</header>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <h1>Categorias</h1>
 
-  <tbody>
+  <div id="categories">
     <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="container amostra_catg">
+        <%= render category %>
+        <p>
+          <%= link_to "Mostrar categoria", category %>
+        </p>
+      </div>
+      
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
-
-<%= link_to 'New Category', new_category_path %>
+  <%= link_to "Criar nova categoria", new_category_path %>
+</div>

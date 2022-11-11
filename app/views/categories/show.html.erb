@@ -1,7 +1,7 @@
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<%= render @category %>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="ctg_links">
+  <%= link_to "Editar categoria", edit_category_path(@category) %> |
+  <%= link_to "Voltar", categories_path %> | 
+  <%= link_to "Excluir categoria", @book, method: :delete, data:{confirm: "Do you want to delete?"} %>
+</div>
