@@ -1,7 +1,7 @@
-<p style="color: green" ><% if notice.present? %>
+<p class="notices" ><% if notice.present? %>
     <%= notice%>
 <% end %> </p>
 
-<p style="color: green" ><% if alert.present? %>
-<%= alert%>
+<p class="notices red" ><% if alert.present? %>
+    <%= alert%>
 <% end %> </p>
