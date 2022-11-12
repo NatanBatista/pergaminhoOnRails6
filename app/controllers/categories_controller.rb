@@ -4,7 +4,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    current_page = (params[:page] || 1).to_i
+    @categories = Category.page(current_page).per(3)
   end
 
   # GET /categories/1 or /categories/1.json
