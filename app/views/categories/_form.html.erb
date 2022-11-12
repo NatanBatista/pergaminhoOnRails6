@@ -2,11 +2,8 @@
   <%= form.error_notification %>
   <%= form.error_notification message: form.object.errors[:base].to_sentence if form.object.errors[:base].present? %>
 
-  <div>
-    <%= form.input :name, style: "display: block" %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="container form_livro">
+    <%= form.input :name, placeholder: 'Nome' %>
+    <%= form.button :submit, class: 'entrar' %>
   </div>
 <% end %>
