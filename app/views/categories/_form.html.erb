@@ -3,7 +3,7 @@
   <%= form.error_notification message: form.object.errors[:base].to_sentence if form.object.errors[:base].present? %>
 
   <div class="container form_livro">
-    <%= form.input :name, placeholder: 'Nome' %>
+    <%= form.input :name, placeholder: 'Nome', autofocus: true %>
     <%= form.button :submit, class: 'entrar' %>
   </div>
 <% end %>
