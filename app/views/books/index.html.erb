@@ -2,14 +2,13 @@
   <main>
     <h1>Pergaminho<i class="fa-solid fa-book"></i></h1>
     <div class="pesquisa">
-      <input
-        class="barra-de-pesquisa"
-        type="search"
-        placeholder="Buscar por título, autor, obra..."
-      />
-      <button class="pesquisa-btn" type="button">
-        Pesquisar
-      </button>
+
+      <%= search_form_for @q do |f| %>
+        <%= f.search_field :name_or_author_or_isbn_cont, placeholder:"Buscar por título, autor, obra...", 
+                                       class:"barra-de-pesquisa"
+                                       %>
+        <%= f.button :Pesquisar, class:"pesquisa-btn" %> 
+      <% end %>
     </div>
     <%= pluralize(@books.size, "Livro", "Livros")%>
     <div>
