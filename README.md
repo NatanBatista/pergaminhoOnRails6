@@ -18,12 +18,12 @@ Things you may want to cover:
   rails db:create
 * Database initialization
   rails db:migrate
-
+  #
 * Front-end
   # Linda Geovana
   
 * Back-end
   # Natan Batista
   
-* Logic project
+* Logical design
   # Arthur Santos
