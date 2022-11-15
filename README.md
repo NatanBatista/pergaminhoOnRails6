@@ -6,11 +6,11 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-  ## 3.0.4
+  # 3.0.4
 * Ruby version
-  ## 6.1.7
+  # 6.1.7
 * Database
-  ## PostgreSQL
+  # PostgreSQL
 
 * Configuration
 
@@ -20,10 +20,10 @@ Things you may want to cover:
   rails db:migrate
 
 * Front-end
-  ## Linda Geovana
+  # Linda Geovana
   
 * Back-end
-  ## Natan Batista
+  # Natan Batista
   
 * Logic project
-  ## Arthur Santos
+  # Arthur Santos
