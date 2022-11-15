@@ -5,7 +5,12 @@ class BooksController < ApplicationController
   # GET /books or /books.json
   def index
     current_page = (params[:page] || 1).to_i
-    @books = Book.page(current_page).per(4)
+    # Pesquisa
+    @q = Book.ransack(params[:q])
+    @books = @q.result.page(current_page).per(4)
+
+    
+    
   end
 
   # GET /books/1 or /books/1.json
