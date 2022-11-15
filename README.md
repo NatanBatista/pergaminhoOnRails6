@@ -8,8 +8,9 @@ Things you may want to cover:
 * Ruby version
   ## 3.0.4
 * Ruby version
-  6.1.7
-* System dependencies
+  ## 6.1.7
+* Database
+  ## PostgreSQL
 
 * Configuration
 
@@ -17,10 +18,12 @@ Things you may want to cover:
   rails db:create
 * Database initialization
   rails db:migrate
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Front-end
+  ## Linda Geovana
+  
+* Back-end
+  ## Natan Batista
+  
+* Logic project
+  ## Arthur Santos
