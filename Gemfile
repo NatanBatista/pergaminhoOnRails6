@@ -65,3 +65,5 @@ gem "simple_form", "~> 5.1"
 gem "devise", "~> 4.8"
 
 gem "kaminari", "~> 1.2"
+
+gem "ransack", "~> 3.2"
