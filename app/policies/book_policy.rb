@@ -16,12 +16,29 @@ class BookPolicy
       true
     end
 
+    def show?
+      true
+    end
+
     def create?
-      false
+      user.admin?
     end
 
     def new?
-      true
+      user.admin?
     end
+
+    def edit?
+      user.admin?
+    end
+
+    def update?
+      user.admin?
+    end
+
+    def destroy?
+      user.admin?
+    end
+
 end
 
