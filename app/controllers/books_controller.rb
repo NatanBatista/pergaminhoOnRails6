@@ -8,6 +8,7 @@ class BooksController < ApplicationController
     # Pesquisa
     @q = Book.ransack(params[:q])
     @books = @q.result.page(current_page).per(4)
+    authorize @books
 
     
     
@@ -20,6 +21,7 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
+    authorize @book
   end
 
   # GET /books/1/edit
