@@ -67,3 +67,5 @@ gem "devise", "~> 4.8"
 gem "kaminari", "~> 1.2"
 
 gem "ransack", "~> 3.2"
+
+gem "pundit", "~> 2.2"

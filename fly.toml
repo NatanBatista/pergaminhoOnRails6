@@ -1,5 +1,5 @@
 # fly.toml file generated for pergaminho on 2022-11-11T23:04:53-03:00
-
+# fly ssh console -C "/app/bin/rails console"
 app = "pergaminho"
 kill_signal = "SIGINT"
 kill_timeout = 5
