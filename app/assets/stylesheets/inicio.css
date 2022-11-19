@@ -55,10 +55,6 @@ h1 {
 
 .pesquisa {
   width: 100%;
-}
-
-.book_search {
-  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
