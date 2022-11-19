@@ -8,7 +8,7 @@
       <%= form.input :desc, placeholder: 'Descrição' %>
       <%= form.input :date, label: 'Data de lançamento', html5: true%>
       <%= form.input :isbn, placeholder: 'ISBN' %>
-      <%= form.association :category, prompt: "Selecionar categoria"%>
+      <%= form.association :categories, prompt: "Selecionar categoria", html5: true%>
 
       <%= form.button :submit, class: 'entrar' %>
     </div>
