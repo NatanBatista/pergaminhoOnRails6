@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    belongs_to :category
+    has_and_belongs_to_many :categories
     validates :name, presence: true, uniqueness: true
     validates :author, presence: true
     validates :desc, presence: true, length: { minimum: 10 }
