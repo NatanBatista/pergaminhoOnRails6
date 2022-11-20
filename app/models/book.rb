@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    has_many :books_category
+    has_many :books_category, dependent: :delete_all
     has_many :categories, through: :books_category
     validates :name, presence: true, uniqueness: true
     validates :author, presence: true
