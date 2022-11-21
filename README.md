@@ -16,10 +16,6 @@ Pergaminho foi criado para ser um serviço online de gerenciamento de uma biblio
 * Base de dados
   ### PostgreSQL
 
-### Bundle
-```bash
-bundle install --without production
-```
 ### Database creation
 ```bash
 rails db:create
