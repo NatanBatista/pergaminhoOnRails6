@@ -24,10 +24,6 @@ rails db:create
 ```bash
 rails db:migrate
 ```
-### Yarn dependencies
-```bash
-yarn install
-```
 
 ## Front-end
   * Linda Geovana
