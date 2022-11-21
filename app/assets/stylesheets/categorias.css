@@ -1,3 +1,12 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  gap: 1rem;
+  min-height: calc(100vh - 55px);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -30,4 +39,18 @@
 .ctg_links {
   display: flex;
   justify-content: center;
+}
+
+.book {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 500px;
+}
+.book h1 {
+  font-size: 1.3rem;
+}
+.book p {
+  color: #000;
+  padding: .5rem 0;
 }

@@ -1,13 +1,13 @@
-<div class="container">
-  <div id="<%= dom_id book %>">
-      <%= book.name %>
+<div class="main-container">
+  <div id="<%= dom_id book %>" class="book"=>
+      <h1><%= book.name %></h1>
 
-    <p>
       <strong>Autor(a):</strong>
       <%= book.author %>
-    </p>
 
-      <%= book.desc %>
+      <p>
+        <%= book.desc %>
+      </p>
 
     <p>
       <strong>ISBN:</strong>
