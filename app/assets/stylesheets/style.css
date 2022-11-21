@@ -42,12 +42,16 @@ a {
   display: none;
 }
 
-.main-login {
+.main {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  min-height: calc(100vh - 20px);
+  min-height: calc(100vh - 55px);
   align-items: center;
+}
+
+.main.log {
+  min-height: calc(100vh - 20px);
 }
 
 .header {
